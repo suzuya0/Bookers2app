@@ -13,10 +13,30 @@
  *= require_tree .
  *= require_self
  */
- 
+
  @import "bootstrap";
+ 
 
 
 div.field, div.actions {
     margin-bottom: 10px;
 }
+
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.Notification {
+ .notice {
+   color: green;
+ }
+ .alert {
+   color: red;
+ }
+}
+
+

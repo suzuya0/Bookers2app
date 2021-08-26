@@ -1,7 +1,7 @@
 <div class="container px-5 px-sm-0"> 
   <div class="row">  
 
-    %= render 'books/list', book: @book,user: @user_list%
+    <%= render 'books/list', book: @book_list,user: @user_list%>
     
     <div class='col-md-8 offset-md-1'>
       <h2>Users</h2>
@@ -22,6 +22,7 @@
             <td><%= link_to 'Show', user_path(user.id) %></td>
           </tr>
           <% end %>
+          
         </tbody>
       </table>
     </div>
