@@ -21,10 +21,12 @@
           
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <% if user_signed_in? %>
-              <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
-              <li><%= link_to 'Home', user_path(current_user.id) %></li>
-              <li><%= link_to 'Books', books_path%></li>
-              <li><%= link_to 'Users', users_path%></li>
+              <ul class="navbar-nav ml-auto">
+                <li><%= link_to ' Home', user_path(current_user.id),class:'fas fa-home nav-link text-light' %></li>
+                <li><%= link_to ' Users', users_path,class:'fas fa-users nav-link text-light'%></li>
+                <li><%= link_to ' Books', books_path,class:'fas fa-book-open nav-link text-light'%></li>
+                <li><%= link_to " logout", destroy_user_session_path,class:'fas fa-sign-out-alt nav-link text-light', method: :delete %></li>
+              </ul>
             <% else %>
               <ul class="navbar-nav ml-auto">
                 <li><%= link_to " Home", "/",class:'fas fa-home nav-link text-light' %></li>
@@ -56,3 +58,4 @@
     
   </body>
 </html>
+
