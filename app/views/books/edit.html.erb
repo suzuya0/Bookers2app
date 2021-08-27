@@ -19,15 +19,19 @@
                 
              
         <%= form_with model:@book, local:true do |f| %>
-        <div class="form-group">
-          <div><%= f.label :title, 'Title' %></div>
-          <div><%= f.text_field :title %></div>
-        </div>
-  
-        <div class="form-group">
-          <div><%= f.label :title, 'Opinion' %></div>
-          <div><%= f.text_area :body %></div>
-        </div>
+ 
+      <div class="form-group">
+        <label for="book_title">Title</label>
+        <%= f.text_field :title, autofocus: true, class:"form-control",id:"inputTitle"%>
+      </div>
+ 
+
+    
+      <div class="form-group">
+        <label for="book_body">Opinion</label>
+        <%= f.text_area :body, autofocus: true, class:"form-control",id:"inputbody"%>
+      </div>
+      
  
  
         <div class="form-group">
@@ -41,6 +45,5 @@
       </div>
     </div>
   <div>
-
 
 
