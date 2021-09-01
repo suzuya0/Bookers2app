@@ -22,10 +22,6 @@ class BooksController < ApplicationController
   end
   
   
-  
-  
-  
-  
   def edit
     @book = Book.find(params[:id])
     if @book.user == current_user
@@ -51,7 +47,9 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book_list = Book.new
     @user_list = @book.user
+    @book_comment = BookComment.new
   end
+  
   
   
 
