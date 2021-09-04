@@ -10,9 +10,23 @@ def favorited_by?(user)
 end
 
 
+  def self.looks(searches, words)
+    if searches == "perfect_match"
+      @book = Book.where("title LIKE ?","#{words}")
+    elsif searches == "forward_match"
+      @book = Book.where("title Like ?","#{words}%")
+    elsif searches == "backward_match"
+      @book = Book.where("title Like ?","%#{words}")
+    else
+      @book = Book.where("title LIKE ?","%#{words}%")
+    end
+  end
 
 validates :title, presence: true
 validates :body, presence: true, length: { maximum: 200 }
 
 end
+
+
+
 
